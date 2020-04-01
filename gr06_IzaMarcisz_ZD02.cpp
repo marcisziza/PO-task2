@@ -19,6 +19,10 @@ class Fraction {
     void print() {
       cout << get_numerator() << "/" << get_denominator() << endl;
     }
+    Fraction(int var) { //converting constructor
+      numerator = var;
+      denominator = 1;
+    }
 };
  
 Fraction division(Fraction fraction_1, Fraction fraction_2) {
@@ -31,5 +35,7 @@ int main() {
   Fraction fraction_2(3,4); fraction_2.print();
 
   cout << "Fraction after division: "; division(fraction_1, fraction_2).print(); 
+
+  cout << "Fraction after division by 5"; division(fraction_1, 5).print();
 
 }
